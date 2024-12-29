@@ -41,6 +41,12 @@ function renderNavBar(parentHTML) {
     aHTMLTop30Participants.innerText = "> Top 30 Participants";
     aHTMLNoGroupParticipants.innerText = "> No Group Participants";
     aHTMLUIHGroups.innerText = "> UIH Groups";
+    /* Title */
+    aHTMLAllPlayers.title = allPlayersTitle;
+    aHTMLTop10Participants.title = top10ParticipantsTitle;
+    aHTMLTop30Participants.title = top30ParticipantsTitle;
+    aHTMLNoGroupParticipants.title = noGroupParticipantsTitle;
+    aHTMLUIHGroups.title = uihGroupsTitle;
     /* CSS classes */
     aHTMLAllPlayers.className = "active";
     /* CLICK events */
@@ -118,6 +124,8 @@ function renderPlayersTable(parentHTML, fadeInBoolean = false) {
     tableHTML.className = "players";
     if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
     thHTMLPlayer.className = "player-name";
+    /* Title */
+    // trHTMLHeader.title = allPlayersTitle;
     /* Cell width */
     thHTMLGroup.colSpan = "2";
     thHTMLGoal10.colSpan = "7";
@@ -215,28 +223,48 @@ function renderSeatsTop10or30Table(parentHTML, groupName, fadeInBoolean = false)
     /* Create */
     const tableHTML = document.createElement("table");
     const captionHTML = document.createElement("caption");
+    const tHeadHTML = document.createElement("thead");
     const trHTMLHeader = document.createElement("tr");
     const thHTMLGroup = document.createElement("th");
     const thHTMLSeats = document.createElement("th");
+    const tBodyHTML = document.createElement("tbody");
+    const tFootHTML = document.createElement("tfoot");
     /* Append */
     parentHTML.append(tableHTML);
-    tableHTML.append(trHTMLHeader);
     tableHTML.append(captionHTML);
+    tableHTML.append(tHeadHTML);
+    tableHTML.append(tBodyHTML);
+    tableHTML.append(tFootHTML);
+    tHeadHTML.append(trHTMLHeader);
     trHTMLHeader.append(thHTMLGroup);
     trHTMLHeader.append(thHTMLSeats);
     /* Inner Text */
-    captionHTML.innerText = `${groupName.charAt(0).toUpperCase().concat(groupName.slice(1))} - Seats:`;
-    thHTMLGroup.innerHTML = "&nbsp;GROUP&nbsp;";
+    captionHTML.innerText = `${groupName.charAt(0).toUpperCase().concat(groupName.slice(1))} Group Seats:`;
+    thHTMLGroup.innerHTML = "SUBGROUP";
+    // thHTMLGroup.innerHTML = "&nbsp;GROUP&nbsp;";
     thHTMLSeats.innerText = "TAKEN / TOTAL";
     /* CSS classes */
     tableHTML.className = "remaining-seats";
     if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
+    /* Title */
+    tHeadHTML.title = groupSeatsTitle;
     /* DINAMIC ROWS  */
     /* top10SubgroupList and top30SubgroupList - coming from INDEX.HTML */
     let topXYSubgroupList = [];
     if (groupName === "top 10") topXYSubgroupList = top10SubgroupList;
     if (groupName === "top 30") topXYSubgroupList = top30SubgroupList;
-    for (let subgroup of topXYSubgroupList) generateRowForSeatsTop10or30Table(tableHTML, subgroup);
+    for (let subgroup of topXYSubgroupList) generateRowForSeatsTop10or30Table(tBodyHTML, subgroup);
+    /* TFOOT */
+    const trFooterHTML = document.createElement("tr");
+    const thFooterHTMLGroup = document.createElement("th");
+    const thFooterHTMLSeats = document.createElement("th");
+    tFootHTML.append(trFooterHTML);
+    trFooterHTML.append(thFooterHTMLGroup);
+    trFooterHTML.append(thFooterHTMLSeats);
+    /* Inner Text */
+    let seatsTaken = topXYSubgroupList.reduce((total, subgroup) => total + (subgroup.maxSeats - subgroup.seatsLeft), 0);    
+    let totalSeats = topXYSubgroupList.reduce((total, subgroup) => total + subgroup.maxSeats, 0);    
+    thFooterHTMLSeats.innerText = `${seatsTaken} / ${totalSeats}`;
 }
 ///
 /// PARTICIPANTS table
@@ -443,12 +471,15 @@ function renderUIHGroupsTable(parentHTML, fadeInBoolean = false) {
     trHTMLHeader.append(thHTMLGoal);
     trHTMLHeader.append(thHTMLCurrent);
     /* Inner Text */
+    captionHTML.innerText = "Goal Completion:";
     thHTMLGroup.innerText = "GROUP";
     thHTMLGoal.innerText = "GOAL";
     thHTMLCurrent.innerText = "CURRENT";
     /* CSS classes */
     tableHTML.className = "uih-groups";
     if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
+    /* Title */
+    trHTMLHeader.title = uihGroupsTitle;
 
     /* DYNAMIC ROWS */
     /// uihGroupList - global variable located inside "../js/globalVariables.js" and is filled with data inside "loadAllData()"

@@ -11,8 +11,8 @@ const top10SubgroupListBP = [
         groupName: "top 10",
         name: "750 k",
         amount: 750000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 3,
+        seatsLeft: 3
     },
     {
         groupName: "top 10",
@@ -25,36 +25,36 @@ const top10SubgroupListBP = [
         groupName: "top 10",
         name: "400 k",
         amount: 400000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 4,
+        seatsLeft: 4
     },
     {
         groupName: "top 10",
         name: "300 k",
         amount: 300000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 3,
+        seatsLeft: 3
     },
     {
         groupName: "top 10",
         name: "250 k",
         amount: 250000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 3,
+        seatsLeft: 3
     },
     {
         groupName: "top 10",
         name: "200 k",
         amount: 200000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 3,
+        seatsLeft: 3
     },
     {
         groupName: "top 10",
         name: "150 k",
         amount: 150000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 3,
+        seatsLeft: 3
     }
 ];
 const top30SubgroupListBP = [
@@ -62,15 +62,15 @@ const top30SubgroupListBP = [
         groupName: "top 30",
         name: "150 k",
         amount: 150000,
-        maxSeats: 3,
-        seatsLeft: 3
+        maxSeats: 5,
+        seatsLeft: 5
     },
     {
         groupName: "top 30",
         name: "100 k",
         amount: 100000,
-        maxSeats: 2,
-        seatsLeft: 2
+        maxSeats: 6,
+        seatsLeft: 6
     }
 ];
 

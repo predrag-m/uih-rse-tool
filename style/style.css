@@ -154,21 +154,31 @@ aside {
 }
 
 /* odd rows 1, 3, 5, 7, ... */
-.remaining-seats tr:nth-child(2n+1),
+.remaining-seats tbody tr:nth-child(2n+1),
 .uih-groups tr:nth-child(2n+1) {
     background-color: var(--row-bg-medium);
 }
 
 /* even rows 2, 4, 6, 8, ... - brighter */
-.remaining-seats tr:nth-child(2n),
+.remaining-seats tbody tr:nth-child(2n),
 .uih-groups tr:nth-child(2n) {
     background-color: var(--row-bg-brightest);
 }
 
 /* first row - darkest row */
-.remaining-seats tr:nth-child(1),
+.remaining-seats thead tr,
 .uih-groups tr:nth-child(1) {
     background-color: var(--row-bg-darkest-1);
+    /* Safari */
+    -webkit-user-select: none;
+    /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* Standard syntax */
+    user-select: none;
+}
+
+.remaining-seats tfoot {
+    font-weight: bold;
 }
 
 .remaining-seats th,
@@ -182,7 +192,7 @@ aside {
     font-size: .8rem;
 }
 
-.remaining-seats th,
+.remaining-seats thead th,
 .uih-groups th {
     border-right: var(--th-border);
 }
@@ -341,7 +351,7 @@ td button.player-name {
 
 .participants tfoot {
     font-weight: bold;
-    border-top: var(--th-border);
+    /* border-top: var(--th-border); */
 }
 
 /* Some participants names are longer than others - tables have to look the same */

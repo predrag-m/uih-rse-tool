@@ -160,11 +160,11 @@ function loadAllData() {
 /// Creates DYNAMIC row for table called "renderSeatsTop10or30Table"
 /// Used inside "renderSeatsTop10or30Table()"
 ///
-function generateRowForSeatsTop10or30Table(tableHTML, subgroup) {
+function generateRowForSeatsTop10or30Table(tBodyHTML, subgroup) {
     const trHTMLDynamic = document.createElement("tr");
     const tdHTMLGroup = document.createElement("td");
     const tdHTMLSeats = document.createElement("td");
-    tableHTML.append(trHTMLDynamic);
+    tBodyHTML.append(trHTMLDynamic);
     trHTMLDynamic.append(tdHTMLGroup);
     trHTMLDynamic.append(tdHTMLSeats);
     /* Inner Text */
