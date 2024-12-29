@@ -1,0 +1,490 @@
+:root {
+    --font-size: .9rem;
+    --bright-see-through-background: rgba(255, 255, 255, 0);
+    --aside-bg-color: rgb(193, 205, 218);
+    --main-bg-color: rgb(200, 213, 227);
+    --nav-active-bg: rgb(0, 0, 0, .15);
+    --nav-active-color: black;
+    --nav-hover-bg: rgb(134, 142, 151);
+    --nav-hover-color: white;
+    --remaining-seats-table-bg: rgba(193, 205, 218, 0);
+    --table-gray-bg: rgb(193, 205, 218);
+    --table-red-bg: rgba(234, 168, 168, .5);
+    /* --table-red-bg: rgb(234, 168, 168); */
+    --table-green-bg: rgba(185, 234, 168, .6);
+    /* --table-green-bg: rgb(185, 234, 168); */
+    --table-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --table-cell-bg-green: rgb(185, 234, 168, .4);
+    /* --table-cell-bg-green: rgb(185, 234, 168, .4); */
+    --table-cell-bg-red: rgb(234, 168, 168, .3);
+    /* --table-cell-bg-red: rgb(234, 168, 168, .4); */
+    --row-bg-darkest-1: rgb(0, 0, 0, .1);
+    --row-bg-darkest-2: rgb(0, 0, 0, 0);
+    --row-bg-brightest: rgba(255, 255, 255, .35);
+    --row-bg-medium: rgba(255, 255, 255, 0.2);
+    --th-border: 1px solid rgb(0, 0, 0, 0.15);
+    --td-border: 1px solid rgba(0, 0, 0, .1);
+    --bg-color-selected: rgba(171, 183, 196, .5);
+    --color-inactive: rgba(16, 16, 16, 0.3);
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    font-size: var(--font-size);
+}
+
+body {
+    display: flex;
+}
+
+button {
+    border: none;
+    background-color: var(--bright-see-through-background);
+    cursor: pointer;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+caption {
+    margin-bottom: 2px;
+    text-align: l;
+}
+
+/* table {
+    transition: width 2s;
+}
+table:start {
+    width: 200px;
+} */
+
+/* ########## aside ########## */
+aside {
+    /* min-width: 210px; */
+    min-width: 230px;
+    background-color: var(--aside-bg-color);
+    position: fixed;
+    height: 100vh;
+}
+
+/* ########## navigation ########## */
+#nav-container ul {
+    list-style-type: none;
+    /* width: 200px; */
+    font-weight: bold;
+}
+
+#nav-container ul li a {
+    display: block;
+    color: #000;
+    /* padding: 7px 16px; */
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#nav-container ul li a.active {
+    /* background-color: var(--bg-color-selected); */
+    background-color: var(--row-bg-darkest-1);
+    color: var(--nav-active-color);
+}
+
+#nav-container ul li a:hover:not(.active),
+#nav-container ul li a.active:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-color);
+}
+
+/* #### Other Stuff Container #### */
+#other-stuff-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: .5rem;
+}
+
+/* ########## Reset Btn ########## */
+#reset-players-list,
+#undo-reset-players-list {
+    border: 1px solid #444;
+    padding: 8px;
+}
+
+#reset-players-list:hover,
+#undo-reset-players-list:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-color);
+    border: none;
+    transform: scale(1.1, 1.1);
+}
+
+
+/* ########## UIH goal ########## */
+/* #uih-groups-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+} */
+
+/* ########## remaining seats table (located inside aside element) ########## */
+#aside-tables-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 2vh; */
+    gap: 3vh;
+    padding: 1vh 0;
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+}
+
+/* same as .players */
+.remaining-seats,
+.uih-groups {
+    /* background-color: rgba(193, 205, 218, 0.878); */
+    /* background-color: var(--table-gray-bg); */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: var(--table-shadow);
+    width: 197px;
+}
+
+/* odd rows 1, 3, 5, 7, ... */
+.remaining-seats tr:nth-child(2n+1),
+.uih-groups tr:nth-child(2n+1) {
+    background-color: var(--row-bg-medium);
+}
+
+/* even rows 2, 4, 6, 8, ... - brighter */
+.remaining-seats tr:nth-child(2n),
+.uih-groups tr:nth-child(2n) {
+    background-color: var(--row-bg-brightest);
+}
+
+/* first row - darkest row */
+.remaining-seats tr:nth-child(1),
+.uih-groups tr:nth-child(1) {
+    background-color: var(--row-bg-darkest-1);
+}
+
+.remaining-seats th,
+.remaining-seats td,
+.uih-groups th,
+.uih-groups td {
+    /* padding: 7px; */
+    /* padding: 7px 12px; */
+    padding: 5px 12px;
+    text-align: center;
+    font-size: .8rem;
+}
+
+.remaining-seats th,
+.uih-groups th {
+    border-right: var(--th-border);
+}
+
+.remaining-seats th:last-child,
+.uih-groups th:last-child {
+    border-right: none;
+}
+
+/* .remaining-seats td:first-child {
+    border-right: 1px solid rgba(0, 0, 0, .1);
+} */
+
+
+
+
+/* ########## main ########## */
+main {
+    width: 91vw;
+    min-height: 100vh;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 3rem;
+    align-items: center;
+    /* align-items: start; */
+
+    margin-left: 230px;
+    padding: 36px 0;
+}
+
+/* ########## all players table (for choosing 'top-X-group' and 'amount' for each player) ########## */
+.players {
+    background-color: var(--table-gray-bg);
+    box-shadow: var(--table-shadow);
+}
+
+/* odd rows 1, 3, 5, 7, ... */
+.players tr:nth-child(2n+1) {
+    background-color: var(--row-bg-medium);
+}
+
+/* even rows 2, 4, 6, 8, ... - brighter */
+.players tr:nth-child(2n) {
+    background-color: var(--row-bg-brightest);
+}
+
+/* first row - darkest row */
+.players tr:nth-child(1) {
+    background-color: var(--row-bg-darkest-1);
+}
+
+/* vertical line between last top-10-amount and first top-30-amount */
+.players tr td:nth-child(11) {
+    border-left: var(--td-border);
+}
+
+/* .players tr:not(:nth-child(1)) {
+    border-top: 1px dotted var(--row-bg-darkest-2);
+} */
+
+.players tr:hover:not(:nth-child(1)) {
+    /* outline: 2px solid var(--table-gray-bg); */
+    /* outline: 2px solid var(--nav-active-bg); */
+    outline: 1.5px solid var(--row-bg-darkest-1);
+    outline-offset: -1.5px;
+}
+
+.players th,
+.players td {
+    text-align: center;
+    min-width: 70px;
+}
+
+.players th {
+    padding: 10px 0;
+    border-right: var(--th-border);
+}
+
+.players th:last-child {
+    border-right: none;
+}
+
+.players button {
+    padding: 10px;
+    width: 100%;
+}
+
+/* ########## classes attached to buttons inside ALL PLAYERS TABLE ########## */
+.top-10-group {}
+
+.top-30-group {}
+
+td button.player-name {
+    /* cursor: help; */
+    border-left: var(--td-border);
+    border-right: var(--td-border);
+
+}
+
+.seats-available-all,
+.goal-exceeded {
+    /* background-color: rgb(185, 234, 168, .4) !important; */
+    background-color: var(--table-cell-bg-green);
+    /* background-color: purple; */
+}
+
+/* .seats-available-some {
+    background-color: rgb(234, 234, 168, .6) !important;
+} */
+
+.seats-available-none,
+.goal-subceeded {
+    background-color: var(--table-cell-bg-red) !important;
+}
+
+/* ########## participants table (rows, borders are partially see through because classes "goal-uncompleted", "goal-completed" carry green/red base color) ########## */
+.participants-container {
+    display: flex;
+    gap: 2rem;
+    align-items: baseline;
+}
+
+.participants {
+    box-shadow: var(--table-shadow);
+    cursor: default;
+
+    /* fadeIn part */
+    /* -webkit-animation: fadeIn 1.2;
+    -moz-animation: fadeIn 1.2;
+    -o-animation: fadeIn 1.2;
+    animation: fadeIn 1.2; */
+}
+
+/* odd rows 1, 3, 5, 7, ... */
+.participants tbody tr:nth-child(2n+1) {
+    background-color: var(--row-bg-medium);
+}
+
+/* even rows 2, 4, 6, 8, ... - brighter */
+.participants tbody tr:nth-child(2n) {
+    background-color: var(--row-bg-brightest);
+}
+
+/* first row - darkest row */
+.participants thead tr {
+    background-color: var(--row-bg-darkest-2);
+    /* Safari */
+    -webkit-user-select: none;
+    /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* Standard syntax */
+    user-select: none;
+}
+
+.participants tfoot {
+    font-weight: bold;
+    border-top: var(--th-border);
+}
+
+/* Some participants names are longer than others - tables have to look the same */
+/* .participants tr:first-child th:first-child {
+    width: 160px;
+} */
+.participants .participant-name {
+    width: 160px;
+}
+
+.participants th,
+.participants td {
+    text-align: center;
+    /* min-width: 120px; */
+    min-width: 100px;
+    /* padding: 10px 0; */
+    /* padding: 10px 14px; */
+    /* padding: 4px 14px; */
+    padding: 4px 14px;
+
+
+}
+
+.participants th:last-child {
+    border-right: none;
+}
+
+/* ########## base background-color (and base border color) for tables: participants "goal-uncompleted" and participants "goal-completed" ########## */
+.goal-uncompleted {
+    background-color: var(--table-red-bg);
+}
+
+.goal-uncompleted th {
+    border-right: var(--th-border);
+}
+
+.goal-completed {
+    background-color: var(--table-green-bg);
+}
+
+.goal-completed th {
+    border-right: var(--th-border);
+}
+
+.no-goal {
+    /* background-color: var(--table-green-bg); */
+    background-color: var(--table-gray-bg);
+}
+
+.no-goal th {
+    border-right: var(--th-border);
+}
+
+/* ########## general classes ########## */
+.selected {
+    /* background-color: rgba(171, 183, 196, .5); */
+    background-color: var(--bg-color-selected);
+    color: black;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    font-weight: normal;
+}
+
+.inactive {
+    /* color: rgba(16, 16, 16, 0.3); */
+    color: var(--color-inactive);
+}
+
+/** fade-in **/
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/** pulsate **/
+@keyframes pulsate {
+    from {
+        /* transform: scale(1); */
+        color: inherit;
+    }
+
+    to {
+        /* transform: scale(1.1); */
+        color: red;
+    }
+}
+
+
+/** fadeIn **/
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -o-transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

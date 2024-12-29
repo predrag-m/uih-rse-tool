@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSE Helper</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="blueprints/playersListBP.js"></script>
+    <script src="blueprints/topXSubgroupListBP.js"></script>
+    <script src="blueprints/uihGroupListBP.js"></script>
+    <script src="js/globalVariables.js"></script>
+    <script src="functions/functions.js"></script>
+    <script src="functions/renderHTMLElements.js"></script>
+    <script src="functions/helperFunctions.js"></script>
+    <script src="functions/filterFunctions.js"></script>
+    <script src="js/rs_History_List.js"></script>
+</head>
+
+<body>
+    <aside id="aside">
+        <nav id="nav-container">
+        </nav>
+        <div id="other-stuff-container">
+        </div>
+        <div id="aside-tables-container">
+            <div id="uih-groups">
+            </div>
+            <div id="remaining-seats-top-10">
+            </div>
+            <div id="remaining-seats-top-30">
+            </div>
+        </div>
+    </aside>
+    <main id="main">
+    </main>
+    <script>
+        /* Parsing the entire 14mb of JSON and then using (filtering) only runs between specific two IDs */
+        const rsHistoryList = JSON.parse(rsHistoryListJSON).filter(onlyEventRuns);
+        /* HTML CONTAINER ELEMENTS - INSIDE OF THEM DINAMIC ELEMENTS ARE RENDERED */
+        const navigationEl = document.getElementById("nav-container");
+        const otherStuffEl = document.getElementById("other-stuff-container");
+        const uihGoalsEl = document.getElementById("uih-groups");
+        const remainingSeatsTop10El = document.getElementById("remaining-seats-top-10");
+        const remainingSeatsTop30El = document.getElementById("remaining-seats-top-30");
+        const mainEl = document.getElementById("main");
+        /* STARTING program */
+        loadAllData();
+        updateUIHGroupList();
+        renderNavBar(navigationEl);
+        renderResetAndUndoResetBtns(otherStuffEl);
+        renderPlayersTable(mainEl);
+        renderUIHGroupsTable(uihGoalsEl);
+        renderSeatsTop10or30Table(remainingSeatsTop10El, "top 10");
+        renderSeatsTop10or30Table(remainingSeatsTop30El, "top 30");
+    </script>
+</body>
+
+</html>
