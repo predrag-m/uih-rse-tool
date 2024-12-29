@@ -33,7 +33,7 @@ const allPlayersTitle = `
 Arranges players into groups with or without set goals.
 To turn a player into a participant (their name turns black) - select the "Top 10" or "Top 30" group for them.
 To turn a participant back into a non-participant (remove their GROUP and GOAL) - click on their name.
-Which player belongs to which group and what their goal is - you can find it on the #uih-event-rs-signup channel on Discord.
+Which player belongs to which group and what their goal is - can be found on the #uih-event-rs-signup channel on Discord.
 `;
 const top10ParticipantsTitle = ``;
 const top30ParticipantsTitle = ``;
