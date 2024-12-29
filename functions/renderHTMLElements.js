@@ -171,27 +171,41 @@ function renderPlayersTable(parentHTML, fadeInBoolean = false) {
         createGoalCells(player, top30SubgroupList, trHTMLDynamic);
         /* LISTEN: "top-10-group" / "top-30-group" / "player-name" buttons */
         tdHTMLGroup10.addEventListener("click", () => {
-            console.log(`top10 clicked`);   // temp
+            // console.log(`top10 clicked`);   // temp
+            let previousGroup = player.group;
             increaseSeatOfCorrectSubgroup(player);
             resetPlayer(player, "top 10");
-            saveToLS();            
+
+            addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGroup);    // test
+
+            saveToLS();
             refreshAllPlayersPage();
         });
         tdHTMLGroup30.addEventListener("click", () => {
-            console.log(`top30 clicked`);   // temp
+            // console.log(`top30 clicked`);   // temp
+            let previousGroup = player.group;
             increaseSeatOfCorrectSubgroup(player);
             resetPlayer(player, "top 30");
-            saveToLS();            
+
+            addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGroup);    // test
+
+            saveToLS();
             refreshAllPlayersPage();
         });
         tdHTMLPlayerName.addEventListener("click", () => {
-            console.log("Removing participant");    // temp
+            // console.log("Removing participant");    // temp
+            let previousGroup = player.group;
             increaseSeatOfCorrectSubgroup(player);
             resetPlayer(player);
-            saveToLS();            
+
+            /* needs to have previous group */
+            addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGroup);   // test
+
+            saveToLS();
             refreshAllPlayersPage();
         });
     }
+    console.log(uihGroupList);  // temp
 }
 ///
 /// TOP 10 SEATS or TOP 30 SEATS

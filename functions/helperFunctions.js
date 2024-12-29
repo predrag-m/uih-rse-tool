@@ -113,6 +113,7 @@ function refreshAllPlayersPage() {
     renderPlayersTable(mainEl, false);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
+    renderUIHGroupsTable(document.getElementById("uih-groups"));    // new 1
 }
 ///
 /// Saves all the data to Local Storage
@@ -316,6 +317,16 @@ function resetXYSeats(subgroupList) {
 ///
 ///
 ///
+function resetUIHGroups() {
+    for (let group of uihGroupList) {
+        group.currentPoints = 0;
+        group.remainingPoints = 0;
+        group.surplusPoints = 0;
+    }
+}
+///
+///
+///
 function loadBackup() {
     if (JSON.parse(localStorage.getItem("top10SubgroupListLSBackup")) === null || JSON.parse(localStorage.getItem("top10SubgroupListLSBackup")) === null) return;
     top10SubgroupList = JSON.parse(localStorage.getItem("top10SubgroupListLSBackup"));
@@ -341,29 +352,39 @@ function resetParticipants() {
     /* FAILSAFE */
     let counter = 0;
     for (let player of playersList) {
-        if (player.goal === 0) counter++;
+        // if (player.goal === 0) counter++;
+        if (player.goal === 0 && player.group === "") counter++;
     }
     if (counter === playersList.length) return;
 
     createBackup();
     resetAllParticipantsValues();
     resetAllSeats();
+    resetUIHGroups();   // new 1
 
     saveToLS();
     renderPlayersTable(mainEl, true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
+    renderUIHGroupsTable(document.getElementById("uih-groups"));    // new 1
 }
 ///
 /// Button inside ASIDE html element
+/// Execute undo ONLY when entire "playersList" has both GOAL = 0 and GROUP = ""
 ///
 function undoResetParticipants() {
     /* FAILSAFE */
     let counter = 0;
     for (let player of playersList) {
-        if (player.goal !== 0) counter++;
+        if (player.goal === 0 && player.group === "") counter++;
     }
-    if (counter > 0 && counter !== playersList.length) return;
+    if (counter !== playersList.length) return;
+    /* copy of the original code */
+    // let counter = 0;
+    // for (let player of playersList) {
+    //     if (player.goal !== 0) counter++;
+    // }
+    // if (counter > 0 && counter !== playersList.length) return;
 
     loadBackup();
 
@@ -371,6 +392,7 @@ function undoResetParticipants() {
     renderPlayersTable(mainEl, true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
+    renderUIHGroupsTable(document.getElementById("uih-groups"));    // new 1
 }
 ///
 /// Used when there are NO keys inside LocalStorage
@@ -426,17 +448,92 @@ function assignCurrentPointsToPlayersList() {
     }
 }
 ///
-/// These 2 functions use "rsHistoryList" data (coming from Discord) to update the "uihGroupList"
-/// "uihGroupList" contains two groups (10 and 30), their goals, and their current amount of points - it is used for monitoring the overall progress
+/// Tried to update uihGroupList's currentPoints by going through playersList and adding currentPoints of each player that also has a group
+/// So far it seems I don't need this but maybe I will need it on first program load (remains to be seen)
+/// Used in "index.html" when starting program
 ///
-function updateUIHGroupList() {
-    for (let group of uihGroupList) updateUIHGroup(group);
-};
-function updateUIHGroup(group) {
-    group.currentPoints = getGroupPoints(group);
-    if (group.currentPoints > group.goal) group.surplusPoints = group.currentPoints - group.goal;
-    if (group.currentPoints < group.goal) group.remainingPoints = group.goal - group.currentPoints;
-    saveToLS();
+// function updateUIHGroupList() {
+//     let group10 = null;
+//     let group30 = null;
+//     for (let group of uihGroupList) {
+//         if (group.name === "top 10") group10 = group;
+//         if (group.name === "top 30") group30 = group;
+//     }
+//     /// go through playersList and gather all player.currentPoints of the same group - and that sum write down into "uihGroupList" (rephrase this comment better)
+//     for (let player of playersList) {
+//         if (player.group === "top 10") group10.currentPoints += player.currentPoints;
+//         if (player.group === "top 30") group30.currentPoints += player.currentPoints
+//     }
+// };
+// fu
+function recalculateRemainingOrSurplusPOfTheGroup(group) {
+    if (group.currentPoints >= group.goal) {
+        // goal has been completed
+        group.remainingPoints = 0;
+        group.surplusPoints = group.currentPoints - group.goal;
+    } else {
+        // goal has NOT yet been completed
+        group.surplusPoints = 0;
+        group.remainingPoints = group.goal - group.currentPoints;
+    }
+}
+///
+/// When user changes certain player's group and or goal - this manages total amount of current points of specific UIH group (10 or 30)
+/// "previousGroup" is a string and can have one of 3 values:
+/// - "top 10"
+/// - "top 30"
+/// - ""        (empty string)
+///
+function addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGroup = null) {
+    let currentGroup = player.group;
+    console.log(`previous group: ` + previousGroup); // temp
+    console.log(`current group: ` + currentGroup);  // temp
+    console.log(player);    // temp
+
+    /// find previous group object - subtract
+    /// find current group object - add
+    for (let group of uihGroupList) {
+        /*
+        1. Non-participant becomes participant:
+            previousGroup:      ""              or          previousGroup:      ""
+            currentGroup:       "top 10"                    currentGroup:       "top 30"
+        */
+        if (previousGroup === "" && currentGroup !== "") {
+            // if (group.name === previousGroup) { group.currentPoints -= player.currentPoints }
+            if (group.name === currentGroup) { group.currentPoints += player.currentPoints }
+        }
+        /*
+            2. Participant becomes non-participant:
+            previousGroup:      "top 10"        or          previousGroup:      "top 30"
+            currentGroup:       ""                          currentGroup:       ""
+        */
+       if (previousGroup !== "" && currentGroup === "") {
+            if (group.name === previousGroup) { group.currentPoints -= player.currentPoints }
+            // if (group.name === currentGroup) { group.currentPoints += player.currentPoints }
+        }
+        /*
+        3. Participant changes group:
+        previousGroup:      "top 10"        or          previousGroup:      "top 30"
+        currentGroup:       "top 30"                    currentGroup:       "top 10"
+        */
+       if (previousGroup !== "" && currentGroup !== "") {
+           if (group.name === previousGroup) { group.currentPoints -= player.currentPoints }
+           if (group.name === currentGroup) { group.currentPoints += player.currentPoints }
+        }
+        /*
+            4. For when we need to update the uihGroupList with playersList (on page load):
+            previousGroup:      ""              or          previousGroup:      ""
+            currentGroup:       "top 10"                    currentGroup:       "top 30"
+        */
+    //    if (!previousGroup) {
+ 
+    //    }
+        /// recalculate remainingPoints and surplusPoints for UIH groups
+        recalculateRemainingOrSurplusPOfTheGroup(group);
+    }
+
+
+    /// renderUIHGroupTable
 }
 ///
 /// Used inside "updateUIHGroup()"
