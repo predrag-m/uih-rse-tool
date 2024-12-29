@@ -245,7 +245,8 @@ function renderSeatsTop10or30Table(parentHTML, groupName, fadeInBoolean = false)
     thHTMLSeats.innerText = "TAKEN / TOTAL";
     /* CSS classes */
     tableHTML.className = "remaining-seats";
-    if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
+    if (fadeInBoolean) tableHTML.style.animation = slowFadeInEffect;
+    // if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
     /* Title */
     tHeadHTML.title = groupSeatsTitle;
     /* DINAMIC ROWS  */
@@ -477,7 +478,7 @@ function renderUIHGroupsTable(parentHTML, fadeInBoolean = false) {
     thHTMLCurrent.innerText = "CURRENT";
     /* CSS classes */
     tableHTML.className = "uih-groups";
-    if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
+    if (fadeInBoolean) tableHTML.style.animation = slowFadeInEffect;
     /* Title */
     trHTMLHeader.title = uihGroupsTitle;
 

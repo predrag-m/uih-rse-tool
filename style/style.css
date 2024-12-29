@@ -435,6 +435,19 @@ td button.player-name {
         opacity: 1;
     }
 }
+/** fade-in-2 **/
+@keyframes fade-in-2 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 /** pulsate **/
 @keyframes pulsate {

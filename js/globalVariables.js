@@ -3,6 +3,7 @@
 ///
 const fadeInEffect = "fade-in .5s";
 const pulsateEffect = "pulsate 1.25s infinite alternate";
+const slowFadeInEffect = "fade-in-2 1.5s ease-in-out reverse";
 
 const firstRSERunID = 32_649;
 const lastRSERunID = 33_865;
