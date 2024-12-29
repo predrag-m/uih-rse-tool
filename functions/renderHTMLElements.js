@@ -42,11 +42,11 @@ function renderNavBar(parentHTML) {
     aHTMLNoGroupParticipants.innerText = "> No Group Participants";
     aHTMLUIHGroups.innerText = "> UIH Groups";
     /* Title */
-    aHTMLAllPlayers.title = allPlayersTitle;
-    aHTMLTop10Participants.title = top10ParticipantsTitle;
-    aHTMLTop30Participants.title = top30ParticipantsTitle;
-    aHTMLNoGroupParticipants.title = noGroupParticipantsTitle;
-    aHTMLUIHGroups.title = uihGroupsTitle;
+    liHTMLAllPlayers.title = allPlayersTitle;
+    liHTMLTop10Participants.title = top10ParticipantsTitle;
+    liHTMLTop30Participants.title = top30ParticipantsTitle;
+    liHTMLNoGroupParticipants.title = noGroupParticipantsTitle;
+    liHTMLUIHGroups.title = uihGroupsTitle;
     /* CSS classes */
     aHTMLAllPlayers.className = "active";
     /* CLICK events */
