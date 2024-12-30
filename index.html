@@ -10,6 +10,7 @@
     <script src="blueprints/topXSubgroupListBP.js"></script>
     <script src="blueprints/uihGroupListBP.js"></script>
     <script src="js/globalVariables.js"></script>
+    <script src="Latest Local Storage Data/latest_local_storage_data.js"></script>
     <script src="functions/functions.js"></script>
     <script src="functions/renderHTMLElements.js"></script>
     <script src="functions/helperFunctions.js"></script>
@@ -19,17 +20,13 @@
 
 <body>
     <aside id="aside">
-        <nav id="nav-container">
-        </nav>
-        <div id="other-stuff-container">
-        </div>
+        <nav id="nav-container"></nav>
+        <div id="other-stuff-container"></div>
+        <div id="other-stuff-2-container"></div>
         <div id="aside-tables-container">
-            <div id="uih-groups">
-            </div>
-            <div id="remaining-seats-top-10">
-            </div>
-            <div id="remaining-seats-top-30">
-            </div>
+            <div id="uih-groups"></div>
+            <div id="remaining-seats-top-10"></div>
+            <div id="remaining-seats-top-30"></div>
         </div>
     </aside>
     <main id="main">
@@ -40,6 +37,7 @@
         /* HTML CONTAINER ELEMENTS - INSIDE OF THEM DINAMIC ELEMENTS ARE RENDERED */
         const navigationEl = document.getElementById("nav-container");
         const otherStuffEl = document.getElementById("other-stuff-container");
+        const otherStuff2El = document.getElementById("other-stuff-2-container");
         const uihGoalsEl = document.getElementById("uih-groups");
         const remainingSeatsTop10El = document.getElementById("remaining-seats-top-10");
         const remainingSeatsTop30El = document.getElementById("remaining-seats-top-30");
@@ -49,10 +47,61 @@
         // updateUIHGroupList();   // remains to be seen if I need this (more details inside "helperFunctions.js - function updateUihGroupList")
         renderNavBar(navigationEl);
         renderResetAndUndoResetBtns(otherStuffEl);
+        renderImportLSBtn(otherStuff2El);
         renderPlayersTable(mainEl);
         renderUIHGroupsTable(uihGoalsEl);
         renderSeatsTop10or30Table(remainingSeatsTop10El, "top 10");
         renderSeatsTop10or30Table(remainingSeatsTop30El, "top 30");
+
+        /* TESTING: Attempt to import/export localStorage */
+        // async function copyContent() {
+        //     try {
+        //         await navigator.clipboard.writeText(
+        //             JSON.stringify(localStorage)
+        //         );
+        //         console.log('Content copied to clipboard');
+        //         /* Resolved - text copied to clipboard successfully */
+        //     } catch (err) {
+        //         console.error('Failed to copy: ', err);
+        //         /* Rejected - text failed to copy to the clipboard */
+        //     }
+        // }
+
+
+        /* TESTING: Attempt to import/export localStorage */
+        // const exportLS = JSON.stringify(localStorage);
+        // console.log(exportLS);  // temp
+
+
+        // function importLS() {
+        //     localStorage = prompt("Paste LS from someone else") || localStorage;
+        //     window.localation = window.location;
+        // }
+        // function exportLS() {
+        //     prompt("Here's a LS you can copy and share with someone else");
+        //     localStorage;
+        // }
+
+        /**
+ * Run this as a bookmarklet or just paste in the console to copy localStorage between sites
+ * or quickly restore localStorage. Copies a function to clipboard which will set localStorage
+ * to match whatever site this was run on.
+ */
+        const copyListener = (event) => {
+            document.removeEventListener("copy", copyListener, true);
+            event.preventDefault();
+            const clipboardData = event.clipboardData;
+            clipboardData.clearData();
+            clipboardData.setData(
+                "text/plain",
+                `let data = ${JSON.stringify(
+                    localStorage
+                )};Object.keys(data).forEach(k=>localStorage.setItem(k, data[k]));`
+            );
+        };
+        document.addEventListener("copy", copyListener, true);
+        document.execCommand("copy");
+
     </script>
 </body>
 

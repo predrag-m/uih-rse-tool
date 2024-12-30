@@ -100,22 +100,32 @@ aside {
 }
 
 /* #### Other Stuff Container #### */
-#other-stuff-container {
+#other-stuff-container,
+#other-stuff-2-container {
     display: flex;
     justify-content: center;
     margin-top: 8px;
     gap: .5rem;
 }
+/* #other-stuff-container {
+    display: grid;
+    width: 100px;
+    grid-template-columns: 1fr;
+    margin-top: 8px;
+    gap: .5rem;
+} */
 
 /* ########## Reset Btn ########## */
 #reset-players-list,
-#undo-reset-players-list {
+#undo-reset-players-list,
+#import-participants-distribution {
     border: 1px solid #444;
     padding: 8px;
 }
 
 #reset-players-list:hover,
-#undo-reset-players-list:hover {
+#undo-reset-players-list:hover,
+#import-participants-distribution:hover {
     background-color: var(--nav-hover-bg);
     color: var(--nav-hover-color);
     border: none;

@@ -97,6 +97,23 @@ function renderResetAndUndoResetBtns(parentHTML) {
     btnHTMLUndoResetParticipants.addEventListener("click", undoResetParticipants);
 }
 ///
+/// IMPORT latest Local Storage Data
+///
+function renderImportLSBtn(parentHTML) {
+    parentHTML.innerHTML = "";
+    const btnHTMLImportLatestParticipantDistribution = document.createElement("button");
+    parentHTML.append(btnHTMLImportLatestParticipantDistribution);
+    /* ATTRIBUTES */
+    btnHTMLImportLatestParticipantDistribution.id = "import-participants-distribution";
+    btnHTMLImportLatestParticipantDistribution.title = `Imports latest players distribution by groups and their goals.`;
+    btnHTMLImportLatestParticipantDistribution.innerText = "Import Local Storage";
+    /* CLICK events */
+    btnHTMLImportLatestParticipantDistribution.addEventListener("click", () => {
+        Object.keys(data).forEach(k=>localStorage.setItem(k, data[k]));
+        location.reload();
+    });
+}
+///
 /// ALL PLAYERS
 ///
 function renderPlayersTable(parentHTML, fadeInBoolean = false) {
@@ -179,7 +196,6 @@ function renderPlayersTable(parentHTML, fadeInBoolean = false) {
         createGoalCells(player, top30SubgroupList, trHTMLDynamic);
         /* LISTEN: "top-10-group" / "top-30-group" / "player-name" buttons */
         tdHTMLGroup10.addEventListener("click", () => {
-            // console.log(`top10 clicked`);   // temp
             let previousGroup = player.group;
             increaseSeatOfCorrectSubgroup(player);
             resetPlayer(player, "top 10");
@@ -190,7 +206,6 @@ function renderPlayersTable(parentHTML, fadeInBoolean = false) {
             refreshAllPlayersPage();
         });
         tdHTMLGroup30.addEventListener("click", () => {
-            // console.log(`top30 clicked`);   // temp
             let previousGroup = player.group;
             increaseSeatOfCorrectSubgroup(player);
             resetPlayer(player, "top 30");
@@ -201,7 +216,6 @@ function renderPlayersTable(parentHTML, fadeInBoolean = false) {
             refreshAllPlayersPage();
         });
         tdHTMLPlayerName.addEventListener("click", () => {
-            // console.log("Removing participant");    // temp
             let previousGroup = player.group;
             increaseSeatOfCorrectSubgroup(player);
             resetPlayer(player);
@@ -213,7 +227,6 @@ function renderPlayersTable(parentHTML, fadeInBoolean = false) {
             refreshAllPlayersPage();
         });
     }
-    console.log(uihGroupList);  // temp
 }
 ///
 /// TOP 10 SEATS or TOP 30 SEATS

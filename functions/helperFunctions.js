@@ -486,10 +486,6 @@ function recalculateRemainingOrSurplusPOfTheGroup(group) {
 ///
 function addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGroup = null) {
     let currentGroup = player.group;
-    console.log(`previous group: ` + previousGroup); // temp
-    console.log(`current group: ` + currentGroup);  // temp
-    console.log(player);    // temp
-
     /// find previous group object - subtract
     /// find current group object - add
     for (let group of uihGroupList) {
