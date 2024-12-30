@@ -213,6 +213,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "Green Fly",
+        id: "635675779870490635",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "gugu",
         id: "220874257356292097",
         goal: 0,
@@ -359,6 +368,15 @@ const playersListBP = [
     {
         name: "lokikol",
         id: "98345380428664832",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
+        name: "LuckyNV",
+        id: "",
         goal: 0,
         group: "",
         currentPoints: 0,
@@ -519,6 +537,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "Saltedboat1",
+        id: "589485748638580736",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "Schaefer WWRA",
         id: "424343385407488001",
         goal: 0,
@@ -575,6 +602,15 @@ const playersListBP = [
     {
         name: "Taiwanistan",
         id: "194722597693292544",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
+        name: "Taldaer",
+        id: "173212181029060608",
         goal: 0,
         group: "",
         currentPoints: 0,
@@ -1199,6 +1235,15 @@ const playersListBPx = [
     {
         name: "Schaefer WWRA",
         id: "424343385407488001",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
+        name: "Sidhero",
+        id: "590842518229221377",
         goal: 0,
         group: "",
         currentPoints: 0,
