@@ -111,9 +111,9 @@ function refreshAllPlayersPage() {
     // loadAllData();
     // saveToLS();
     renderPlayersTable(mainEl, false);
-    renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
-    renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
-    renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
+    renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10");
+    renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30");
+    renderUIHGroupsTable(document.getElementById("uih-groups"));    // new 1
 }
 ///
 /// Saves all the data to Local Storage
