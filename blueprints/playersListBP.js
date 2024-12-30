@@ -555,6 +555,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "Sidhero",
+        id: "590842518229221377",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "SilverWolf",
         id: "598777553142153216",
         goal: 0,
