@@ -105,8 +105,11 @@ function renderImportLSBtn(parentHTML) {
     parentHTML.append(btnHTMLImportLatestParticipantDistribution);
     /* ATTRIBUTES */
     btnHTMLImportLatestParticipantDistribution.id = "import-participants-distribution";
-    btnHTMLImportLatestParticipantDistribution.title = `Imports latest players distribution by groups and their goals.`;
-    btnHTMLImportLatestParticipantDistribution.innerText = "Import Local Storage";
+    btnHTMLImportLatestParticipantDistribution.title = `
+    Redistributes participants GROUP and GOAL inside All Players table,\nbased on the data coming from #uih-event-rs-signup on Discord.
+    `;
+    btnHTMLImportLatestParticipantDistribution.innerText = "Import RS Signup List";
+    // btnHTMLImportLatestParticipantDistribution.innerText = "Import Local Storage";
     /* CLICK events */
     btnHTMLImportLatestParticipantDistribution.addEventListener("click", () => {
         Object.keys(data).forEach(k=>localStorage.setItem(k, data[k]));

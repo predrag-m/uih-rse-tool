@@ -376,7 +376,7 @@ const playersListBP = [
     },
     {
         name: "LuckyNV",
-        id: "",
+        id: "829357387600232489",
         goal: 0,
         group: "",
         currentPoints: 0,
