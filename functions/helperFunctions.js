@@ -366,7 +366,7 @@ function resetParticipants() {
     renderPlayersTable(mainEl, true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
-    renderUIHGroupsTable(document.getElementById("uih-groups"));    // new 1
+    renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
 }
 ///
 /// Button inside ASIDE html element
@@ -392,7 +392,7 @@ function undoResetParticipants() {
     renderPlayersTable(mainEl, true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
-    renderUIHGroupsTable(document.getElementById("uih-groups"));    // new 1
+    renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
 }
 ///
 /// Used when there are NO keys inside LocalStorage

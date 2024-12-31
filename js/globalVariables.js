@@ -3,7 +3,7 @@
 ///
 const fadeInEffect = "fade-in .5s";
 const pulsateEffect = "pulsate 1.25s infinite alternate";
-const slowFadeInEffect = "fade-in-2 1.5s ease-in-out reverse";
+const slowFadeInEffect = "fade-in-2 1.5s reverse";
 
 const firstRSERunID = 32_649;
 const lastRSERunID = 33_865;
@@ -48,5 +48,14 @@ Actual level of completion may vary from that shown here.
 `;
 const groupSeatsTitle = `
 When all seats in a subgroup are taken, the cell will be colored RED.
-When all seats for the entire group are taken, the "Top 10" or "Top 30" cells within the "All Players Table" \nwill become gray and unclickable, preventing the USER from assigning more participants than the group has seats for.
+When all seats for the entire group are taken, the "Top 10" or "Top 30" cells within the "All Players" table \nwill become gray and unclickable, preventing the USER from assigning more participants than the group has seats for.
+`;
+const resetParticipantsTitle = `
+Removes GROUP and GOAL from every player.
+`;
+const undoResetParticipantsTitle = `
+Restores GROUP and GOAL for those players that had them.
+`;
+const importLatestParticipantDistributionTitle = `
+Redistributes participants GROUP and GOAL inside "All Players" table,\nbased on the data coming from the #uih-event-rs-signup channel on Discord.
 `;

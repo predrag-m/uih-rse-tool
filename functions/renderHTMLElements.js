@@ -88,8 +88,8 @@ function renderResetAndUndoResetBtns(parentHTML) {
     /* ATTRIBUTES */
     btnHTMLResetParticipants.id = "reset-players-list";
     btnHTMLUndoResetParticipants.id = "undo-reset-players-list";
-    btnHTMLResetParticipants.title = `Removes GROUP and GOAL from every player.`;
-    btnHTMLUndoResetParticipants.title = `Restores GROUP and GOAL for those players that had them.`;
+    btnHTMLResetParticipants.title = resetParticipantsTitle;
+    btnHTMLUndoResetParticipants.title = undoResetParticipantsTitle;
     btnHTMLResetParticipants.innerText = "Reset participants";
     btnHTMLUndoResetParticipants.innerText = "Undo";
     /* CLICK events */
@@ -105,9 +105,7 @@ function renderImportLSBtn(parentHTML) {
     parentHTML.append(btnHTMLImportLatestParticipantDistribution);
     /* ATTRIBUTES */
     btnHTMLImportLatestParticipantDistribution.id = "import-participants-distribution";
-    btnHTMLImportLatestParticipantDistribution.title = `
-    Redistributes participants GROUP and GOAL inside All Players table,\nbased on the data coming from #uih-event-rs-signup on Discord.
-    `;
+    btnHTMLImportLatestParticipantDistribution.title = importLatestParticipantDistributionTitle;
     btnHTMLImportLatestParticipantDistribution.innerText = "Import RS Signup List";
     // btnHTMLImportLatestParticipantDistribution.innerText = "Import Local Storage";
     /* CLICK events */
@@ -261,8 +259,7 @@ function renderSeatsTop10or30Table(parentHTML, groupName, fadeInBoolean = false)
     thHTMLSeats.innerText = "TAKEN / TOTAL";
     /* CSS classes */
     tableHTML.className = "remaining-seats";
-    if (fadeInBoolean) tableHTML.style.animation = slowFadeInEffect;
-    // if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
+    if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
     /* Title */
     tHeadHTML.title = groupSeatsTitle;
     /* DINAMIC ROWS  */
@@ -494,7 +491,7 @@ function renderUIHGroupsTable(parentHTML, fadeInBoolean = false) {
     thHTMLCurrent.innerText = "CURRENT";
     /* CSS classes */
     tableHTML.className = "uih-groups";
-    if (fadeInBoolean) tableHTML.style.animation = slowFadeInEffect;
+    if (fadeInBoolean) tableHTML.style.animation = fadeInEffect;
     /* Title */
     trHTMLHeader.title = uihGroupsTitle;
 

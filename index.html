@@ -48,10 +48,10 @@
         renderNavBar(navigationEl);
         renderResetAndUndoResetBtns(otherStuffEl);
         renderImportLSBtn(otherStuff2El);
-        renderPlayersTable(mainEl);
-        renderUIHGroupsTable(uihGoalsEl);
-        renderSeatsTop10or30Table(remainingSeatsTop10El, "top 10");
-        renderSeatsTop10or30Table(remainingSeatsTop30El, "top 30");
+        renderPlayersTable(mainEl, true);                                   // on refresh page
+        renderUIHGroupsTable(uihGoalsEl, true);                             // on refresh page
+        renderSeatsTop10or30Table(remainingSeatsTop10El, "top 10", true);   // on refresh page
+        renderSeatsTop10or30Table(remainingSeatsTop30El, "top 30", true);   // on refresh page
 
         /* TESTING: Attempt to import/export localStorage */
         // async function copyContent() {
