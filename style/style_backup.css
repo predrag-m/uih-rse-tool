@@ -54,7 +54,6 @@ button:hover {
 caption {
     margin-bottom: 2px;
     text-align: l;
-    font-size: .9em;
 }
 
 /* table {
@@ -84,9 +83,8 @@ aside {
     display: block;
     color: #000;
     /* padding: 7px 16px; */
+    padding: 8px 16px;
     text-decoration: none;
-    padding: 6px 12px;
-    font-size: .9em;
 }
 
 #nav-container ul li a.active {
@@ -122,7 +120,7 @@ aside {
 #undo-reset-players-list,
 #import-participants-distribution {
     border: 1px solid #444;
-    padding: 6px;
+    padding: 8px;
 }
 
 #reset-players-list:hover,
@@ -148,20 +146,11 @@ aside {
     flex-direction: column;
     align-items: center;
     /* gap: 2vh; */
-    gap: 2vh;
+    gap: 3vh;
     padding: 1vh 0;
     position: absolute;
     bottom: 12px;
     width: 100%;
-}
-
-#aside-tables-container .remaining-seats th,
-#aside-tables-container .remaining-seats td,
-#aside-tables-container .uih-groups th,
-#aside-tables-container .uih-groups td {
-    padding: 4px 12px;
-    text-align: center;
-    font-size: .75rem;
 }
 
 /* same as .players */
