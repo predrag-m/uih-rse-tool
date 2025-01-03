@@ -151,6 +151,11 @@ function loadAllData() {
         assignCurrentPointsToPlayersList(); // copies values from JSON into playersList
         uihGroupList = uihGroupListBP;
     }
+    // based on rsHistoryList - update current points oe each player inside playersList
+    assignCurrentPointsToPlayersList();
+    // recalculate UIH group points
+    recalculateUIHGroups();
+
     /* Populate other lists: */
     participantsList = playersList.filter(onlyParticipants);
     group10ParticipantsList = participantsList.filter(byTheirGroup, "top 10");
@@ -325,6 +330,23 @@ function resetUIHGroups() {
     }
 }
 ///
+/// Update UIHGroups current points, remaining and surplus points
+///
+function recalculateUIHGroups() {
+    resetUIHGroups();
+
+    for (let group of uihGroupList) {
+        for (let player of playersList) {
+            if (player.group === group.name) {
+                group.currentPoints += player.currentPoints;
+            }
+
+        }
+    }
+
+    saveToLS();
+}
+///
 ///
 ///
 function loadBackup() {
@@ -367,8 +389,6 @@ function resetParticipants() {
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
     renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
-
-    hideSideBar();
 }
 ///
 /// Button inside ASIDE html element
@@ -395,8 +415,6 @@ function undoResetParticipants() {
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
     renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
-    
-    hideSideBar();
 }
 ///
 /// Used when there are NO keys inside LocalStorage
@@ -450,25 +468,28 @@ function assignCurrentPointsToPlayersList() {
         playerCurrentPoints = getPlayerTotalPoints(playerRunsList);
         player.currentPoints = playerCurrentPoints;
     }
+    recalculateRemainingOrSurplusPOfTheGroup("top 10");
+    recalculateRemainingOrSurplusPOfTheGroup("top 30");
+    saveToLS();
 }
 ///
 /// Tried to update uihGroupList's currentPoints by going through playersList and adding currentPoints of each player that also has a group
 /// So far it seems I don't need this but maybe I will need it on first program load (remains to be seen)
 /// Used in "index.html" when starting program
 ///
-// function updateUIHGroupList() {
-//     let group10 = null;
-//     let group30 = null;
-//     for (let group of uihGroupList) {
-//         if (group.name === "top 10") group10 = group;
-//         if (group.name === "top 30") group30 = group;
-//     }
-//     /// go through playersList and gather all player.currentPoints of the same group - and that sum write down into "uihGroupList" (rephrase this comment better)
-//     for (let player of playersList) {
-//         if (player.group === "top 10") group10.currentPoints += player.currentPoints;
-//         if (player.group === "top 30") group30.currentPoints += player.currentPoints
-//     }
-// };
+function updateUIHGroupList() {
+    let group10 = null;
+    let group30 = null;
+    for (let group of uihGroupList) {
+        if (group.name === "top 10") group10 = group;
+        if (group.name === "top 30") group30 = group;
+    }
+    /// go through playersList and gather all player.currentPoints of the same group - and that sum write down into "uihGroupList" (rephrase this comment better)
+    for (let player of playersList) {
+        if (player.group === "top 10") group10.currentPoints += player.currentPoints;
+        if (player.group === "top 30") group30.currentPoints += player.currentPoints
+    }
+};
 // fu
 function recalculateRemainingOrSurplusPOfTheGroup(group) {
     if (group.currentPoints >= group.goal) {
