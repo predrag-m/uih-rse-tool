@@ -54,36 +54,26 @@ function renderNavBar(parentHTML) {
         renderPlayersTable(mainEl, true);
         aHTMLAllPlayers.className = "active";
         hideCertainNavBarHTMLElements(aHTMLTop10Participants, aHTMLTop30Participants, aHTMLNoGroupParticipants, aHTMLUIHGroups);
-
-        hideSideBar();
     });
     aHTMLTop10Participants.addEventListener("click", () => {
         renderParticipantsTables(mainEl, "top 10", true);
         aHTMLTop10Participants.className = "active";
         hideCertainNavBarHTMLElements(aHTMLAllPlayers, aHTMLTop30Participants, aHTMLNoGroupParticipants, aHTMLUIHGroups);
-
-        hideSideBar();
     });
     aHTMLTop30Participants.addEventListener("click", () => {
         renderParticipantsTables(mainEl, "top 30", true);
         aHTMLTop30Participants.className = "active";
         hideCertainNavBarHTMLElements(aHTMLAllPlayers, aHTMLTop10Participants, aHTMLNoGroupParticipants, aHTMLUIHGroups);
-
-        hideSideBar();
     });
     aHTMLNoGroupParticipants.addEventListener("click", () => {
         renderParticipantsTables(mainEl, "", true);
         aHTMLNoGroupParticipants.className = "active";
         hideCertainNavBarHTMLElements(aHTMLAllPlayers, aHTMLTop10Participants, aHTMLTop30Participants, aHTMLUIHGroups);
-        
-        hideSideBar();
     });
     aHTMLUIHGroups.addEventListener("click", () => {
         renderUIHGroupsTable(mainEl, true);
         aHTMLUIHGroups.className = "active";
         hideCertainNavBarHTMLElements(aHTMLAllPlayers, aHTMLTop10Participants, aHTMLTop30Participants, aHTMLNoGroupParticipants);
-        
-        hideSideBar();
     });
 }
 ///
@@ -122,8 +112,6 @@ function renderImportLSBtn(parentHTML) {
     btnHTMLImportLatestParticipantDistribution.addEventListener("click", () => {
         Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
         location.reload();
-    
-        hideSideBar();
     });
 }
 ///

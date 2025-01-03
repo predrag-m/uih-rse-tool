@@ -51,6 +51,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "badtoast",
+        id: "505192464320299039",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "Blood3000",
         id: "496270205094199309",
         goal: 0,
@@ -105,6 +114,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "Cygnus",
+        id: "114504950498852866",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "DaPAPA",
         id: "620850089354592257",
         goal: 0,
@@ -125,6 +143,15 @@ const playersListBP = [
     {
         name: "Der_Faehrman",
         id: "663106506568499218",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
+        name: "Dull",
+        id: "992657500342063276",
         goal: 0,
         group: "",
         currentPoints: 0,

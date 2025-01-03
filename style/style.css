@@ -56,13 +56,6 @@ caption {
     text-align: l;
 }
 
-/* table {
-    transition: width 2s;
-}
-table:start {
-    width: 200px;
-} */
-
 /* ########## aside ########## */
 aside {
     /* min-width: 210px; */
@@ -82,8 +75,7 @@ aside {
 #nav-container ul li a {
     display: block;
     color: #000;
-    /* padding: 7px 16px; */
-    padding: 8px 16px;
+    padding: 4px 16px;
     text-decoration: none;
 }
 
@@ -107,20 +99,13 @@ aside {
     margin-top: 8px;
     gap: .5rem;
 }
-/* #other-stuff-container {
-    display: grid;
-    width: 100px;
-    grid-template-columns: 1fr;
-    margin-top: 8px;
-    gap: .5rem;
-} */
 
 /* ########## Reset Btn ########## */
 #reset-players-list,
 #undo-reset-players-list,
 #import-participants-distribution {
     border: 1px solid #444;
-    padding: 8px;
+    padding: 4px 8px;
 }
 
 #reset-players-list:hover,
@@ -133,20 +118,13 @@ aside {
 }
 
 
-/* ########## UIH goal ########## */
-/* #uih-groups-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-} */
-
 /* ########## remaining seats table (located inside aside element) ########## */
 #aside-tables-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* gap: 2vh; */
-    gap: 3vh;
+    gap: 2vh;
     padding: 1vh 0;
     position: absolute;
     bottom: 12px;
@@ -197,7 +175,8 @@ aside {
 .uih-groups td {
     /* padding: 7px; */
     /* padding: 7px 12px; */
-    padding: 5px 12px;
+    /* padding: 5px 12px; */
+    padding: 4px 12px;
     text-align: center;
     font-size: .8rem;
 }
