@@ -109,6 +109,7 @@ aside {
     margin-top: 8px;
     gap: .5rem;
 }
+
 /* #other-stuff-container {
     display: grid;
     width: 100px;
@@ -447,6 +448,38 @@ td button.player-name {
     color: var(--color-inactive);
 }
 
+/* MEDIA QUERRY */
+@media screen and (max-width: 360px) {
+    #aside {
+        display: none;
+    }
+
+    #main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .players th,
+    .players td {
+        text-align: center;
+        /* min-width: 70px; */
+    }
+
+    .players th {
+        /* padding: 10px 0; */
+        border-right: var(--th-border);
+    }
+
+    .players th:last-child {
+        border-right: none;
+    }
+
+    .players button {
+        padding: 0;
+        width: 100%;
+    }
+}
+
 /** fade-in **/
 @keyframes fade-in {
     from {
@@ -457,11 +490,13 @@ td button.player-name {
         opacity: 1;
     }
 }
+
 /** fade-in-2 **/
 @keyframes fade-in-2 {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
