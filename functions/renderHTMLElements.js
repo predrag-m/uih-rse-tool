@@ -111,7 +111,20 @@ function renderImportLSBtn(parentHTML) {
     /* CLICK events */
     btnHTMLImportLatestParticipantDistribution.addEventListener("click", () => {
         Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
-        location.reload();
+
+        // assignCurrentPointsToPlayersList();
+        // recalculateUIHGroups();
+
+        loadAllData();
+        renderNavBar(navigationEl);
+        renderResetAndUndoResetBtns(otherStuffEl);
+        renderImportLSBtn(otherStuff2El);
+        renderPlayersTable(mainEl, true);                                   // on refresh page
+        renderUIHGroupsTable(uihGoalsEl, true);                             // on refresh page
+        renderSeatsTop10or30Table(remainingSeatsTop10El, "top 10", true);   // on refresh page
+        renderSeatsTop10or30Table(remainingSeatsTop30El, "top 30", true);   // on refresh page
+
+        // location.reload();
     });
 }
 ///

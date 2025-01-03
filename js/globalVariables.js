@@ -5,10 +5,16 @@ const fadeInEffect = "fade-in .5s";
 const pulsateEffect = "pulsate 1.25s infinite alternate";
 const slowFadeInEffect = "fade-in-2 1.5s reverse";
 
-const firstRSERunID = 32_649;
-const lastRSERunID = 33_865;
 const top10GoalSUM = 13_000_000;
 const top30GoalSUM = 4_500_000;
+
+/* December 2024 */
+// const firstRSERunID = 32_649;
+// const lastRSERunID = 33_865;
+
+/* Januar 2025 */
+const firstRSERunID = 34_600;
+const lastRSERunID = 99_999;
 
 let top10SubgroupList = null;
 let top30SubgroupList = null;

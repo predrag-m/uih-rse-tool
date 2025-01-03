@@ -153,6 +153,7 @@ function loadAllData() {
     }
     // based on rsHistoryList - update current points oe each player inside playersList
     assignCurrentPointsToPlayersList();
+
     // recalculate UIH group points
     recalculateUIHGroups();
 
@@ -463,14 +464,29 @@ function renderDynamicRowsForParticipantsTable(groupXYParticipantsList, tBodyHTM
 /// It then copies those points into each player's "currentPoints" property (player is an object inside "playersList")
 ///
 function assignCurrentPointsToPlayersList() {
+    console.log(playersList);   // temp
     for (let player of playersList) {
         let playerRunsList = rsHistoryList.filter(onlyEventRunsOfSpecificPlayer, player);
         playerCurrentPoints = getPlayerTotalPoints(playerRunsList);
         player.currentPoints = playerCurrentPoints;
     }
-    recalculateRemainingOrSurplusPOfTheGroup("top 10");
-    recalculateRemainingOrSurplusPOfTheGroup("top 30");
+    recalculatePlayersRemainingAndSurplusP();
     saveToLS();
+}
+///
+///
+///
+function recalculatePlayersRemainingAndSurplusP() {
+    for (let player of playersList) {
+        if (player.goal !== "" && player.currentPoints < player.goal) {
+            player.remainingPoints = player.goal - player.currentPoints;
+            player.surplusPoints = 0;
+        };
+        if (player.goal !== "" && player.currentPoints >= player.goal) {
+            player.surplusPoints = player.currentPoints - player.goal;
+            player.remainingPoints = 0;
+        };
+    }
 }
 ///
 /// Tried to update uihGroupList's currentPoints by going through playersList and adding currentPoints of each player that also has a group
@@ -491,17 +507,17 @@ function updateUIHGroupList() {
     }
 };
 // fu
-function recalculateRemainingOrSurplusPOfTheGroup(group) {
-    if (group.currentPoints >= group.goal) {
-        // goal has been completed
-        group.remainingPoints = 0;
-        group.surplusPoints = group.currentPoints - group.goal;
-    } else {
-        // goal has NOT yet been completed
-        group.surplusPoints = 0;
-        group.remainingPoints = group.goal - group.currentPoints;
-    }
-}
+// function recalculateRemainingOrSurplusPOfTheGroup(group) {
+//     if (group.currentPoints >= group.goal) {
+//         // goal has been completed
+//         group.remainingPoints = 0;
+//         group.surplusPoints = group.currentPoints - group.goal;
+//     } else {
+//         // goal has NOT yet been completed
+//         group.surplusPoints = 0;
+//         group.remainingPoints = group.goal - group.currentPoints;
+//     }
+// }
 ///
 /// When user changes certain player's group and or goal - this manages total amount of current points of specific UIH group (10 or 30)
 /// "previousGroup" is a string and can have one of 3 values:
