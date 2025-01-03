@@ -367,6 +367,8 @@ function resetParticipants() {
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
     renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
+
+    hideSideBar();
 }
 ///
 /// Button inside ASIDE html element
@@ -393,6 +395,8 @@ function undoResetParticipants() {
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-10"), "top 10", true);
     renderSeatsTop10or30Table(document.getElementById("remaining-seats-top-30"), "top 30", true);
     renderUIHGroupsTable(document.getElementById("uih-groups"), true);    // new 1
+    
+    hideSideBar();
 }
 ///
 /// Used when there are NO keys inside LocalStorage
@@ -503,7 +507,7 @@ function addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGr
             previousGroup:      "top 10"        or          previousGroup:      "top 30"
             currentGroup:       ""                          currentGroup:       ""
         */
-       if (previousGroup !== "" && currentGroup === "") {
+        if (previousGroup !== "" && currentGroup === "") {
             if (group.name === previousGroup) { group.currentPoints -= player.currentPoints }
             // if (group.name === currentGroup) { group.currentPoints += player.currentPoints }
         }
@@ -512,18 +516,18 @@ function addOrRemoveParticipantCurrentPointsToCorrectUIHGroup(player, previousGr
         previousGroup:      "top 10"        or          previousGroup:      "top 30"
         currentGroup:       "top 30"                    currentGroup:       "top 10"
         */
-       if (previousGroup !== "" && currentGroup !== "") {
-           if (group.name === previousGroup) { group.currentPoints -= player.currentPoints }
-           if (group.name === currentGroup) { group.currentPoints += player.currentPoints }
+        if (previousGroup !== "" && currentGroup !== "") {
+            if (group.name === previousGroup) { group.currentPoints -= player.currentPoints }
+            if (group.name === currentGroup) { group.currentPoints += player.currentPoints }
         }
         /*
             4. For when we need to update the uihGroupList with playersList (on page load):
             previousGroup:      ""              or          previousGroup:      ""
             currentGroup:       "top 10"                    currentGroup:       "top 30"
         */
-    //    if (!previousGroup) {
- 
-    //    }
+        //    if (!previousGroup) {
+
+        //    }
         /// recalculate remainingPoints and surplusPoints for UIH groups
         recalculateRemainingOrSurplusPOfTheGroup(group);
     }
@@ -566,4 +570,12 @@ function howManySeatsAreInGroup(groupName) {
     if (groupName === "top 30") {
         return top30SubgroupList.reduce((total, subgroup) => { return total + subgroup.maxSeats }, 0);
     }
+}
+///
+///
+///
+function hideSideBar() {
+    document.getElementById("aside").style.display = "none";
+    document.getElementById("veil").style.display = "none";
+    document.getElementById("website-header").style.display = "block";
 }

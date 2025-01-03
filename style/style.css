@@ -343,12 +343,6 @@ td button.player-name {
 .participants {
     box-shadow: var(--table-shadow);
     cursor: default;
-
-    /* fadeIn part */
-    /* -webkit-animation: fadeIn 1.2;
-    -moz-animation: fadeIn 1.2;
-    -o-animation: fadeIn 1.2;
-    animation: fadeIn 1.2; */
 }
 
 /* odd rows 1, 3, 5, 7, ... */
@@ -449,8 +443,83 @@ td button.player-name {
 }
 
 /* MEDIA QUERRY */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1120px) {
+    #main {
+        width: 100%;
+    }
+
+    .players th,
+    .players td {
+        min-width: 10px;
+    }
+
+    .players th {
+        padding: 10px 6px;
+    }
+
+    .players button {
+        padding: 10px 4px;
+    }
+
+    /* participants */
+    .participants-container {
+        flex-direction: column;
+    }
+
+    .participants th,
+    .participants td {
+        text-align: center;
+        min-width: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        /* flex-direction: column; */
+        position: relative;
+    }
+
+    #website-header {
+        width: 100%;
+        /* width: 100vw; */
+        height: 35px;
+        background-color: var(--aside-bg-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        align-items: center;
+    }
+
+    #website-header span {
+        padding: 0 30px;
+        /* background-color: pink; */
+        font-weight: bold;
+        display: inline-block;
+        height: 100%;
+        line-height: 36px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, .075);
+    }
+    #website-header span:hover {
+        background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-color);
+    }
+
+
+    #veil {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
+    }
+
     #aside {
+        position: fixed;
         display: none;
     }
 
@@ -461,21 +530,41 @@ td button.player-name {
 
     .players th,
     .players td {
-        text-align: center;
-        /* min-width: 70px; */
+        min-width: 10px;
     }
 
     .players th {
-        /* padding: 10px 0; */
-        border-right: var(--th-border);
-    }
-
-    .players th:last-child {
-        border-right: none;
+        padding: 10px 6px;
     }
 
     .players button {
-        padding: 0;
+        padding: 10px 4px;
+        /* width: 100%; */
+    }
+
+    /* participants */
+    .participants-container {
+        /* display: flex; */
+        flex-direction: column;
+        /* gap: 2rem; */
+        /* align-items: baseline; */
+    }
+
+    .participants th,
+    .participants td {
+        text-align: center;
+        min-width: 0px;
+        /* padding: 4px 14px; */
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .players {
+        width: 100%;
+
+    }
+    .players button {
+        padding: 10px 0;
         width: 100%;
     }
 }

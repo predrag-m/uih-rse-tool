@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <div id="website-header">
+        <span id="menu">MENU</span>
+    </div>
+    <div id="veil"></div>
     <aside id="aside">
         <nav id="nav-container"></nav>
         <div id="other-stuff-container"></div>
@@ -29,6 +33,7 @@
             <div id="remaining-seats-top-30"></div>
         </div>
     </aside>
+
     <main id="main">
     </main>
     <script>
@@ -53,36 +58,20 @@
         renderSeatsTop10or30Table(remainingSeatsTop10El, "top 10", true);   // on refresh page
         renderSeatsTop10or30Table(remainingSeatsTop30El, "top 30", true);   // on refresh page
 
-        /* TESTING: Attempt to import/export localStorage */
-        // async function copyContent() {
-        //     try {
-        //         await navigator.clipboard.writeText(
-        //             JSON.stringify(localStorage)
-        //         );
-        //         console.log('Content copied to clipboard');
-        //         /* Resolved - text copied to clipboard successfully */
-        //     } catch (err) {
-        //         console.error('Failed to copy: ', err);
-        //         /* Rejected - text failed to copy to the clipboard */
-        //     }
-        // }
+        document.getElementById("veil").addEventListener("click", () => {
+            console.log("Veil should be hidden");   // temp
+            document.getElementById("aside").style.display = "none";
+            document.getElementById("veil").style.display = "none";
+            document.getElementById("website-header").style.display = "block";
+        });
+        
+        document.getElementById("menu").addEventListener("click", () => {
+            document.getElementById("aside").style.display = "block";
+            document.getElementById("veil").style.display = "block";
+            document.getElementById("website-header").style.display = "none";
+        });
 
-
-        /* TESTING: Attempt to import/export localStorage */
-        // const exportLS = JSON.stringify(localStorage);
-        // console.log(exportLS);  // temp
-
-
-        // function importLS() {
-        //     localStorage = prompt("Paste LS from someone else") || localStorage;
-        //     window.localation = window.location;
-        // }
-        // function exportLS() {
-        //     prompt("Here's a LS you can copy and share with someone else");
-        //     localStorage;
-        // }
-
-        /**
+        /* TES
  * Run this as a bookmarklet or just paste in the console to copy localStorage between sites
  * or quickly restore localStorage. Copies a function to clipboard which will set localStorage
  * to match whatever site this was run on.
