@@ -3586,5 +3586,61 @@ const rsHistoryListJSON = `[
     ],
     "points": 20440,
     "points_updater": 638703929965674496
+  },
+  {
+    "date": "2025-01-04T05:08:08-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34827,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "miniyuuzhan#0",
+        "id": 100641889329377280
+      }
+    ],
+    "points": 6776,
+    "points_updater": 100641889329377280
+  },
+  {
+    "date": "2025-01-04T05:10:37-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34828,
+    "players": 3,
+    "size": 3,
+    "users": [
+      {
+        "name": "coolboyks#0",
+        "id": 843427042137604126
+      },
+      {
+        "name": "ledaizi#0",
+        "id": 598777553142153216
+      },
+      {
+        "name": "sivanhighlander#0",
+        "id": 884547980399636532
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
+  },
+  {
+    "date": "2025-01-04T05:10:54-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34829,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "owenspears#0",
+        "id": 353268237355581451
+      }
+    ],
+    "points": 27936,
+    "points_updater": 353268237355581451
   }
 ]`;

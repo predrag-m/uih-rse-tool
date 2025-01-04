@@ -105,6 +105,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "Coolboyks",
+        id: "843427042137604126",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "CTDUNGX",
         id: "763390261950152704",
         goal: 0,

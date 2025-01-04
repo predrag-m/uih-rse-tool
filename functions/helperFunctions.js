@@ -507,17 +507,17 @@ function updateUIHGroupList() {
     }
 };
 // fu
-// function recalculateRemainingOrSurplusPOfTheGroup(group) {
-//     if (group.currentPoints >= group.goal) {
-//         // goal has been completed
-//         group.remainingPoints = 0;
-//         group.surplusPoints = group.currentPoints - group.goal;
-//     } else {
-//         // goal has NOT yet been completed
-//         group.surplusPoints = 0;
-//         group.remainingPoints = group.goal - group.currentPoints;
-//     }
-// }
+function recalculateRemainingOrSurplusPOfTheGroup(group) {
+    if (group.currentPoints >= group.goal) {
+        // goal has been completed
+        group.remainingPoints = 0;
+        group.surplusPoints = group.currentPoints - group.goal;
+    } else {
+        // goal has NOT yet been completed
+        group.surplusPoints = 0;
+        group.remainingPoints = group.goal - group.currentPoints;
+    }
+}
 ///
 /// When user changes certain player's group and or goal - this manages total amount of current points of specific UIH group (10 or 30)
 /// "previousGroup" is a string and can have one of 3 values:
