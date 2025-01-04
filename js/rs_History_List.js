@@ -3098,5 +3098,213 @@ const rsHistoryListJSON = `[
     ],
     "points": 18624,
     "points_updater": 450157473295499291
+  },
+  {
+    "date": "2025-01-04T03:39:18-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34787,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "daharmaster#0",
+        "id": 518940411654438932
+      }
+    ],
+    "points": 7392,
+    "points_updater": 518940411654438932
+  },
+  {
+    "date": "2025-01-04T03:40:14-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34788,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sidhero#0",
+        "id": 590842518229221377
+      }
+    ],
+    "points": 10160,
+    "points_updater": 590842518229221377
+  },
+  {
+    "date": "2025-01-04T03:42:22-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34789,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "qwerty0909090#0",
+        "id": 1210465019863629825
+      }
+    ],
+    "points": 16280,
+    "points_updater": 1210465019863629825
+  },
+  {
+    "date": "2025-01-04T03:43:40-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34790,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "dapapa1560#0",
+        "id": 620850089354592257
+      }
+    ],
+    "points": 34356,
+    "points_updater": 620850089354592257
+  },
+  {
+    "date": "2025-01-04T03:50:34-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34791,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "daharmaster#0",
+        "id": 518940411654438932
+      }
+    ],
+    "points": 7112,
+    "points_updater": 518940411654438932
+  },
+  {
+    "date": "2025-01-04T03:53:22-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34792,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sidhero#0",
+        "id": 590842518229221377
+      }
+    ],
+    "points": 11040,
+    "points_updater": 590842518229221377
+  },
+  {
+    "date": "2025-01-04T03:56:44-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 34793,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "greenfly#0",
+        "id": 635675779870490635
+      }
+    ],
+    "points": 26768,
+    "points_updater": 635675779870490635
+  },
+  {
+    "date": "2025-01-04T03:59:22-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34794,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "saltedboat#0",
+        "id": 589485748638580736
+      }
+    ],
+    "points": 14800,
+    "points_updater": 589485748638580736
+  },
+  {
+    "date": "2025-01-04T04:01:27-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34795,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "thelastkaiser#0",
+        "id": 1108064037805232229
+      }
+    ],
+    "points": 7280,
+    "points_updater": 1108064037805232229
+  },
+  {
+    "date": "2025-01-04T04:01:33-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34796,
+    "players": 3,
+    "size": 3,
+    "users": [
+      {
+        "name": "deathlurks#0",
+        "id": 67188547026690048
+      },
+      {
+        "name": "ledaizi#0",
+        "id": 598777553142153216
+      },
+      {
+        "name": "tonyrobloxian#0",
+        "id": 642317562801029120
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
+  },
+  {
+    "date": "2025-01-04T04:02:05-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34797,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "qwerty0909090#0",
+        "id": 1210465019863629825
+      }
+    ],
+    "points": 16000,
+    "points_updater": 1210465019863629825
+  },
+  {
+    "date": "2025-01-04T04:02:51-05:00",
+    "star": "DRS",
+    "level": 8,
+    "id": 34798,
+    "players": 3,
+    "size": 3,
+    "users": [
+      {
+        "name": "miniyuuzhan#0",
+        "id": 100641889329377280
+      },
+      {
+        "name": "daharmaster#0",
+        "id": 518940411654438932
+      },
+      {
+        "name": "edwinnl#0",
+        "id": 261494840578146304
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
   }
 ]`;
