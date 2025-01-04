@@ -120,6 +120,10 @@ function refreshAllPlayersPage() {
 /// Used inside HELPER FUNCTION called "refreshAllPlayersPage()"
 ///
 function saveToLS() {
+    localStorage.removeItem("top10SubgroupListLS"); // Maybe I don't need these 4 lines?
+    localStorage.removeItem("top30SubgroupListLS");
+    localStorage.removeItem("playersListLS");
+    localStorage.removeItem("uihGroupListLS");
     localStorage.setItem("top10SubgroupListLS", JSON.stringify(top10SubgroupList));
     localStorage.setItem("top30SubgroupListLS", JSON.stringify(top30SubgroupList));
     localStorage.setItem("playersListLS", JSON.stringify(playersList));
@@ -464,7 +468,7 @@ function renderDynamicRowsForParticipantsTable(groupXYParticipantsList, tBodyHTM
 /// It then copies those points into each player's "currentPoints" property (player is an object inside "playersList")
 ///
 function assignCurrentPointsToPlayersList() {
-    console.log(playersList);   // temp
+    // console.log(playersList);   // temp
     for (let player of playersList) {
         let playerRunsList = rsHistoryList.filter(onlyEventRunsOfSpecificPlayer, player);
         playerCurrentPoints = getPlayerTotalPoints(playerRunsList);

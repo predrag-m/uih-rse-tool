@@ -4536,8 +4536,8 @@ const rsHistoryListJSON = `[
         "id": 453986218129227776
       }
     ],
-    "points": 0,
-    "points_updater": 0
+    "points": 23760,
+    "points_updater": 1108064037805232229
   },
   {
     "date": "2025-01-04T07:52:11-05:00",
@@ -4618,5 +4618,77 @@ const rsHistoryListJSON = `[
     ],
     "points": 22644,
     "points_updater": 843427042137604126
+  },
+  {
+    "date": "2025-01-04T08:21:32-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 34890,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "linq1408#0",
+        "id": 1134401246686621846
+      }
+    ],
+    "points": 42608,
+    "points_updater": 1134401246686621846
+  },
+  {
+    "date": "2025-01-04T08:22:54-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34891,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "miniyuuzhan#0",
+        "id": 100641889329377280
+      }
+    ],
+    "points": 7252,
+    "points_updater": 100641889329377280
+  },
+  {
+    "date": "2025-01-04T08:23:20-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34892,
+    "players": 3,
+    "size": 3,
+    "users": [
+      {
+        "name": "alexeigreshenko#0",
+        "id": 206626828100567040
+      },
+      {
+        "name": "snugsterr#0",
+        "id": 190283785470869506
+      },
+      {
+        "name": "prattos#0",
+        "id": 538652908162383874
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
+  },
+  {
+    "date": "2025-01-04T08:32:57-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34893,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "letoatreides124#0",
+        "id": 743594925354123355
+      }
+    ],
+    "points": 12280,
+    "points_updater": 743594925354123355
   }
 ]`;
