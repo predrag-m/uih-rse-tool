@@ -3624,8 +3624,8 @@ const rsHistoryListJSON = `[
         "id": 884547980399636532
       }
     ],
-    "points": 0,
-    "points_updater": 0
+    "points": 30960,
+    "points_updater": 884547980399636532
   },
   {
     "date": "2025-01-04T05:10:54-05:00",
@@ -3722,5 +3722,213 @@ const rsHistoryListJSON = `[
     ],
     "points": 7336,
     "points_updater": 100641889329377280
+  },
+  {
+    "date": "2025-01-04T05:33:34-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34835,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sidhero#0",
+        "id": 590842518229221377
+      }
+    ],
+    "points": 10960,
+    "points_updater": 590842518229221377
+  },
+  {
+    "date": "2025-01-04T05:35:26-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34836,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mars#0",
+        "id": 544252448592625664
+      }
+    ],
+    "points": 18096,
+    "points_updater": 544252448592625664
+  },
+  {
+    "date": "2025-01-04T05:39:05-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34837,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "miniyuuzhan#0",
+        "id": 100641889329377280
+      }
+    ],
+    "points": 7196,
+    "points_updater": 100641889329377280
+  },
+  {
+    "date": "2025-01-04T05:43:45-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34838,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "owenspears#0",
+        "id": 353268237355581451
+      }
+    ],
+    "points": 30156,
+    "points_updater": 353268237355581451
+  },
+  {
+    "date": "2025-01-04T05:45:17-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 34839,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "triskalcalypso#0",
+        "id": 697093695023087628
+      }
+    ],
+    "points": 17384,
+    "points_updater": 697093695023087628
+  },
+  {
+    "date": "2025-01-04T05:46:14-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34840,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "qwerty0909090#0",
+        "id": 1210465019863629825
+      }
+    ],
+    "points": 9880,
+    "points_updater": 1210465019863629825
+  },
+  {
+    "date": "2025-01-04T05:48:16-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 34841,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sidhero#0",
+        "id": 590842518229221377
+      }
+    ],
+    "points": 10480,
+    "points_updater": 590842518229221377
+  },
+  {
+    "date": "2025-01-04T05:52:02-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 34842,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "miniyuuzhan#0",
+        "id": 100641889329377280
+      }
+    ],
+    "points": 7140,
+    "points_updater": 100641889329377280
+  },
+  {
+    "date": "2025-01-04T05:54:17-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34843,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mars#0",
+        "id": 544252448592625664
+      }
+    ],
+    "points": 18804,
+    "points_updater": 544252448592625664
+  },
+  {
+    "date": "2025-01-04T05:55:38-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34844,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "owenspears#0",
+        "id": 353268237355581451
+      }
+    ],
+    "points": 32256,
+    "points_updater": 353268237355581451
+  },
+  {
+    "date": "2025-01-04T05:57:31-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 34845,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "cptharl0ck#0",
+        "id": 874191969205776434
+      }
+    ],
+    "points": 31356,
+    "points_updater": 874191969205776434
+  },
+  {
+    "date": "2025-01-04T05:58:53-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 34846,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "cmaster#0",
+        "id": 559502689491353635
+      }
+    ],
+    "points": 28768,
+    "points_updater": 559502689491353635
+  },
+  {
+    "date": "2025-01-04T06:03:06-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 34847,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "linq1408#0",
+        "id": 1134401246686621846
+      }
+    ],
+    "points": 37648,
+    "points_updater": 1134401246686621846
   }
 ]`;
