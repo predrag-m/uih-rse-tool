@@ -13,7 +13,7 @@ const top30GoalSUM = 4_500_000;
 // const lastRSERunID = 33_865;
 
 /* Januar 2025 */
-const firstRSERunID = 34_600;
+const firstRSERunID = 34_608;
 const lastRSERunID = 99_999;
 
 let top10SubgroupList = null;
