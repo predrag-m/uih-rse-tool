@@ -501,6 +501,15 @@ const playersListBP = [
         surplusPoints: 0
     },
     {
+        name: "Ollie1408",
+        id: "1134401246686621846",
+        goal: 0,
+        group: "",
+        currentPoints: 0,
+        remainingPoints: 0,
+        surplusPoints: 0
+    },
+    {
         name: "Owenspears",
         id: "353268237355581451",
         goal: 0,

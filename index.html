@@ -46,6 +46,8 @@
         const mainEl = document.getElementById("main");
         /* STARTING program */
         loadAllData();
+        Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
+        loadAllData();
         // updateUIHGroupList();   // remains to be seen if I need this (more details inside "helperFunctions.js - function updateUihGroupList")
         renderNavBar(navigationEl);
         renderResetAndUndoResetBtns(otherStuffEl);
