@@ -45,7 +45,6 @@
         const remainingSeatsTop30El = document.getElementById("remaining-seats-top-30");
         const mainEl = document.getElementById("main");
         /* STARTING program */
-        loadAllData();
         localStorage.clear();
         Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
         loadAllData();
