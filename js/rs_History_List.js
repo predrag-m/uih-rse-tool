@@ -8372,8 +8372,8 @@ const rsHistoryListJSON = `[
         "id": 158926311404994561
       }
     ],
-    "points": 0,
-    "points_updater": 0
+    "points": 25080,
+    "points_updater": 928600742711922700
   },
   {
     "date": "2025-01-04T15:22:14-05:00",
@@ -8406,5 +8406,397 @@ const rsHistoryListJSON = `[
     ],
     "points": 50192,
     "points_updater": 191960306988220417
+  },
+  {
+    "date": "2025-01-04T15:27:21-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35122,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "jiblu#0",
+        "id": 798197690109526037
+      }
+    ],
+    "points": 14440,
+    "points_updater": 798197690109526037
+  },
+  {
+    "date": "2025-01-04T15:27:23-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35123,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "chessmemes#0",
+        "id": 1198453055608340635
+      }
+    ],
+    "points": 14120,
+    "points_updater": 1198453055608340635
+  },
+  {
+    "date": "2025-01-04T15:27:36-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35124,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sivanhighlander#0",
+        "id": 884547980399636532
+      }
+    ],
+    "points": 15696,
+    "points_updater": 884547980399636532
+  },
+  {
+    "date": "2025-01-04T15:28:26-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35125,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "fatsappyxzi#0",
+        "id": 611922673869652061
+      }
+    ],
+    "points": 23648,
+    "points_updater": 611922673869652061
+  },
+  {
+    "date": "2025-01-04T15:31:03-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 35126,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "adrian112233#0",
+        "id": 829357387600232489
+      }
+    ],
+    "points": 6888,
+    "points_updater": 829357387600232489
+  },
+  {
+    "date": "2025-01-04T15:39:09-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35127,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "gg343#0",
+        "id": 406586895636889610
+      }
+    ],
+    "points": 50120,
+    "points_updater": 406586895636889610
+  },
+  {
+    "date": "2025-01-04T15:39:12-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35128,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "chessmemes#0",
+        "id": 1198453055608340635
+      }
+    ],
+    "points": 15440,
+    "points_updater": 1198453055608340635
+  },
+  {
+    "date": "2025-01-04T15:39:44-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35129,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "rsmith6657#0",
+        "id": 453354733827129355
+      }
+    ],
+    "points": 23728,
+    "points_updater": 453354733827129355
+  },
+  {
+    "date": "2025-01-04T15:42:10-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35130,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mrbeat#0",
+        "id": 191960306988220417
+      }
+    ],
+    "points": 47568,
+    "points_updater": 191960306988220417
+  },
+  {
+    "date": "2025-01-04T15:42:36-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35131,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "fatsappyxzi#0",
+        "id": 611922673869652061
+      }
+    ],
+    "points": 14004,
+    "points_updater": 611922673869652061
+  },
+  {
+    "date": "2025-01-04T15:44:23-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 35132,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "adrian112233#0",
+        "id": 829357387600232489
+      }
+    ],
+    "points": 6916,
+    "points_updater": 829357387600232489
+  },
+  {
+    "date": "2025-01-04T15:46:58-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35133,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "owenspears#0",
+        "id": 353268237355581451
+      }
+    ],
+    "points": 27696,
+    "points_updater": 353268237355581451
+  },
+  {
+    "date": "2025-01-04T15:49:58-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35134,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "jiblu#0",
+        "id": 798197690109526037
+      }
+    ],
+    "points": 12360,
+    "points_updater": 798197690109526037
+  },
+  {
+    "date": "2025-01-04T15:50:46-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35135,
+    "players": 3,
+    "size": 3,
+    "users": [
+      {
+        "name": "azskip#0",
+        "id": 779193979077525535
+      },
+      {
+        "name": "lionofparadise#0",
+        "id": 397191857685266435
+      },
+      {
+        "name": "mrmarbles97#0",
+        "id": 282195229052895233
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
+  },
+  {
+    "date": "2025-01-04T15:51:22-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35136,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "chessmemes#0",
+        "id": 1198453055608340635
+      }
+    ],
+    "points": 15720,
+    "points_updater": 1198453055608340635
+  },
+  {
+    "date": "2025-01-04T15:55:54-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35137,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "fatsappyxzi#0",
+        "id": 611922673869652061
+      }
+    ],
+    "points": 21168,
+    "points_updater": 611922673869652061
+  },
+  {
+    "date": "2025-01-04T15:59:56-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35138,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "owenspears#0",
+        "id": 353268237355581451
+      }
+    ],
+    "points": 26976,
+    "points_updater": 353268237355581451
+  },
+  {
+    "date": "2025-01-04T16:00:19-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35139,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mrbeat#0",
+        "id": 191960306988220417
+      }
+    ],
+    "points": 32848,
+    "points_updater": 191960306988220417
+  },
+  {
+    "date": "2025-01-04T16:04:13-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35140,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "chessmemes#0",
+        "id": 1198453055608340635
+      }
+    ],
+    "points": 14080,
+    "points_updater": 1198453055608340635
+  },
+  {
+    "date": "2025-01-04T16:05:55-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35141,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "rsmith6657#0",
+        "id": 453354733827129355
+      }
+    ],
+    "points": 19648,
+    "points_updater": 453354733827129355
+  },
+  {
+    "date": "2025-01-04T16:10:16-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35142,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sivanhighlander#0",
+        "id": 884547980399636532
+      }
+    ],
+    "points": 20016,
+    "points_updater": 884547980399636532
+  },
+  {
+    "date": "2025-01-04T16:10:34-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35143,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "jiblu#0",
+        "id": 798197690109526037
+      }
+    ],
+    "points": 13840,
+    "points_updater": 798197690109526037
+  },
+  {
+    "date": "2025-01-04T16:10:53-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35144,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "fatsappyxzi#0",
+        "id": 611922673869652061
+      }
+    ],
+    "points": 15876,
+    "points_updater": 611922673869652061
+  },
+  {
+    "date": "2025-01-04T16:13:17-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35145,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "owenspears#0",
+        "id": 353268237355581451
+      }
+    ],
+    "points": 26304,
+    "points_updater": 353268237355581451
   }
 ]`;
