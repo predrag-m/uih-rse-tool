@@ -46,6 +46,7 @@
         const mainEl = document.getElementById("main");
         /* STARTING program */
         loadAllData();
+        localStorage.clear();
         Object.keys(data).forEach(k => localStorage.setItem(k, data[k]));
         loadAllData();
         // updateUIHGroupList();   // remains to be seen if I need this (more details inside "helperFunctions.js - function updateUihGroupList")
