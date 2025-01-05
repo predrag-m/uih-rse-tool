@@ -15270,5 +15270,105 @@ const rsHistoryListJSON = `[
     ],
     "points": 49728,
     "points_updater": 191960306988220417
+  },
+  {
+    "date": "2025-01-05T12:01:52-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35543,
+    "players": 2,
+    "size": 3,
+    "users": [
+      {
+        "name": "gantores#0",
+        "id": 200420843673747456
+      },
+      {
+        "name": "mrbeat#0",
+        "id": 191960306988220417
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
+  },
+  {
+    "date": "2025-01-05T12:02:04-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35544,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "welsons#0",
+        "id": 207412984471879681
+      }
+    ],
+    "points": 15840,
+    "points_updater": 207412984471879681
+  },
+  {
+    "date": "2025-01-05T12:06:18-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 35545,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "deinon3264#0",
+        "id": 424343385407488001
+      }
+    ],
+    "points": 7140,
+    "points_updater": 424343385407488001
+  },
+  {
+    "date": "2025-01-05T12:12:09-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35546,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "sivanhighlander#0",
+        "id": 884547980399636532
+      }
+    ],
+    "points": 17916,
+    "points_updater": 884547980399636532
+  },
+  {
+    "date": "2025-01-05T12:13:21-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35547,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "welsons#0",
+        "id": 207412984471879681
+      }
+    ],
+    "points": 15920,
+    "points_updater": 207412984471879681
+  },
+  {
+    "date": "2025-01-05T12:17:09-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35548,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "rsmith6657#0",
+        "id": 453354733827129355
+      }
+    ],
+    "points": 21452,
+    "points_updater": 453354733827129355
   }
 ]`;
