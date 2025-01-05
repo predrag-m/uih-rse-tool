@@ -17682,5 +17682,21 @@ const rsHistoryListJSON = `[
     ],
     "points": 0,
     "points_updater": 0
+  },
+  {
+    "date": "2025-01-05T18:33:42-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35689,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "badtoast#0",
+        "id": 505192464320299039
+      }
+    ],
+    "points": 13440,
+    "points_updater": 505192464320299039
   }
 ]`;
