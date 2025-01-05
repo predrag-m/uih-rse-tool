@@ -16034,5 +16034,253 @@ const rsHistoryListJSON = `[
     ],
     "points": 11960,
     "points_updater": 598777553142153216
+  },
+  {
+    "date": "2025-01-05T13:23:45-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 35590,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "linq#0",
+        "id": 125778685730095104
+      }
+    ],
+    "points": 6888,
+    "points_updater": 125778685730095104
+  },
+  {
+    "date": "2025-01-05T13:25:47-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35591,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "jjjuu8#0",
+        "id": 1166089041289158870
+      }
+    ],
+    "points": 24276,
+    "points_updater": 1166089041289158870
+  },
+  {
+    "date": "2025-01-05T13:26:51-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35592,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "fatsappyxzi#0",
+        "id": 611922673869652061
+      }
+    ],
+    "points": 16476,
+    "points_updater": 611922673869652061
+  },
+  {
+    "date": "2025-01-05T13:28:05-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35593,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mrbeat#0",
+        "id": 191960306988220417
+      }
+    ],
+    "points": 46528,
+    "points_updater": 191960306988220417
+  },
+  {
+    "date": "2025-01-05T13:29:46-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 35594,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "daharmaster#0",
+        "id": 518940411654438932
+      }
+    ],
+    "points": 6188,
+    "points_updater": 518940411654438932
+  },
+  {
+    "date": "2025-01-05T13:33:54-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35595,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "haywire288#0",
+        "id": 479963412483276809
+      }
+    ],
+    "points": 16200,
+    "points_updater": 479963412483276809
+  },
+  {
+    "date": "2025-01-05T13:40:46-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35596,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "jjjuu8#0",
+        "id": 1166089041289158870
+      }
+    ],
+    "points": 25668,
+    "points_updater": 1166089041289158870
+  },
+  {
+    "date": "2025-01-05T13:50:22-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35597,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mrbeat#0",
+        "id": 191960306988220417
+      }
+    ],
+    "points": 54928,
+    "points_updater": 191960306988220417
+  },
+  {
+    "date": "2025-01-05T13:51:14-05:00",
+    "star": "DRS",
+    "level": 11,
+    "id": 35598,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "mrmarbles97#0",
+        "id": 282195229052895233
+      }
+    ],
+    "points": 42848,
+    "points_updater": 282195229052895233
+  },
+  {
+    "date": "2025-01-05T13:51:52-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35599,
+    "players": 3,
+    "size": 3,
+    "users": [
+      {
+        "name": "ash20#0",
+        "id": 145001790625153024
+      },
+      {
+        "name": "haywire288#0",
+        "id": 479963412483276809
+      },
+      {
+        "name": "deathlurks#0",
+        "id": 67188547026690048
+      }
+    ],
+    "points": 0,
+    "points_updater": 0
+  },
+  {
+    "date": "2025-01-05T13:53:38-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35600,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "lionofparadise#0",
+        "id": 397191857685266435
+      }
+    ],
+    "points": 25116,
+    "points_updater": 397191857685266435
+  },
+  {
+    "date": "2025-01-05T13:54:10-05:00",
+    "star": "DRS",
+    "level": 10,
+    "id": 35601,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "jjjuu8#0",
+        "id": 1166089041289158870
+      }
+    ],
+    "points": 22404,
+    "points_updater": 1166089041289158870
+  },
+  {
+    "date": "2025-01-05T13:55:32-05:00",
+    "star": "DRS",
+    "level": 8,
+    "id": 35602,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "daharmaster#0",
+        "id": 518940411654438932
+      }
+    ],
+    "points": 8864,
+    "points_updater": 518940411654438932
+  },
+  {
+    "date": "2025-01-05T13:56:39-05:00",
+    "star": "DRS",
+    "level": 7,
+    "id": 35603,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "linq#0",
+        "id": 125778685730095104
+      }
+    ],
+    "points": 7448,
+    "points_updater": 125778685730095104
+  },
+  {
+    "date": "2025-01-05T13:58:41-05:00",
+    "star": "DRS",
+    "level": 9,
+    "id": 35604,
+    "players": 1,
+    "size": 3,
+    "users": [
+      {
+        "name": "seattlebean#0",
+        "id": 1154469013087338578
+      }
+    ],
+    "points": 13280,
+    "points_updater": 1154469013087338578
   }
 ]`;
